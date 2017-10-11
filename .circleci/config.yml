@@ -35,5 +35,8 @@ jobs:
       - run: yarn ng build --prod --build-optimizer --no-progress
       # run tests!
       - run: yarn ng test --sr --no-progress
+      - deploy:
+          command: |
+            sh scripts/publish.sh
 
 
